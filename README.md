@@ -2,7 +2,7 @@
 
 ## Overview
 
-This project builds an end-to-end machine learning pipeline that predicts a protein's functional class directly from its amino acid sequence — no structural data required. It replicates the core feature engineering workflow used in real bioinformatics research, using Biopython's ProtParam module to derive physicochemical descriptors, then benchmarks Random Forest against SVM across standard classification metrics.
+This project builds an end-to-end machine learning pipeline that predicts a protein's functional class directly from its amino acid sequence.
 
 **Functional classes predicted:**
 
@@ -30,8 +30,6 @@ This project builds an end-to-end machine learning pipeline that predicts a prot
 | Transporter | 0.68 | 0.60 | 0.64 |
 
 ## Features Engineered (45 total)
-
-Features are computed with `src/features.py`, which implements the same algorithms as Biopython's `Bio.SeqUtils.ProtParam`.
 
 | Category | Features | Count |
 |---|---|---|

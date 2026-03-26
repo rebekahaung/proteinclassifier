@@ -1,10 +1,8 @@
 import re
 import numpy as np
 
-#Constants
 AA_LIST = list("ACDEFGHIKLMNPQRSTVWY")
 
-# Kyte-Doolittle hydrophobicity (J. Mol. Biol. 157:105-132, 1982)
 HYDROPHOBICITY = {
     'A':  1.8, 'R': -4.5, 'N': -3.5, 'D': -3.5, 'C':  2.5,
     'Q': -3.5, 'E': -3.5, 'G': -0.4, 'H': -3.2, 'I':  4.5,
@@ -12,7 +10,6 @@ HYDROPHOBICITY = {
     'S': -0.8, 'T': -0.7, 'W': -0.9, 'Y': -1.3, 'V':  4.2,
 }
 
-# Monoisotopic residue weights (Da) — subtract water for each peptide bond
 AA_WEIGHTS = {
     'A':  89.04768, 'R': 174.11168, 'N': 132.05349, 'D': 133.03751,
     'C': 121.01975, 'Q': 146.06914, 'E': 147.05316, 'G':  75.03203,
@@ -28,10 +25,8 @@ PKA = {
     'Nterm': 8.0, 'Cterm': 3.1,
 }
 
-# Molar extinction at 280 nm (M⁻¹ cm⁻¹), reduced cysteines
 EXTINCTION_COEFF = {'W': 5500, 'Y': 1490, 'C': 125}
 
-# Chou-Fasman secondary structure propensities
 HELIX_PROP  = {'A':1.45,'R':0.98,'N':0.73,'D':0.98,'C':0.77,'Q':1.17,'E':1.53,
                'G':0.53,'H':1.24,'I':1.00,'L':1.34,'K':1.07,'M':1.20,'F':1.12,
                'P':0.59,'S':0.79,'T':0.82,'W':1.14,'Y':0.61,'V':1.14}
@@ -42,7 +37,6 @@ SHEET_PROP  = {'A':0.97,'R':0.93,'N':0.65,'D':0.72,'C':1.30,'Q':1.23,'E':0.26,
                'G':0.81,'H':0.71,'I':1.60,'L':1.22,'K':0.74,'M':1.67,'F':1.28,
                'P':0.62,'S':0.72,'T':1.20,'W':1.19,'Y':1.29,'V':1.65}
 
-# Selected informative dipeptides
 DIPEPTIDES = ['KK','EE','RR','DD','FF','WW','PP','GG',
               'AA','LL','VV','II','SS','TT']
 

@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # Protein Function Classifier
 
 ## Overview
@@ -54,17 +53,3 @@ The output dashboard covers:
 - **Cross-validation boxplots** — 5-fold F1 distribution per model
 - **Metric summary cards** — precision, recall, ROC-AUC at a glance
 
----
-
-## Data Source
-
-Sequences are fetched from the [UniProt Swiss-Prot](https://www.uniprot.org/) REST API 
-
----
-
-## License
-
-MIT
-=======
-# Protein Classifier
->>>>>>> d362d1c66c034179d74e7dc4981e3681f33b6c12
